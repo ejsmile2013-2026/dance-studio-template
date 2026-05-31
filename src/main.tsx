@@ -11,6 +11,7 @@ import Blog from './pages/Blog.tsx';
 import Gallery from './pages/Gallery.tsx';
 import Classes from './pages/Classes.tsx';
 import FAQ from './pages/FAQ.tsx';
+import Proposal from './pages/Proposal.tsx';
 import './index.css';
 
 createRoot(document.getElementById('root')!).render(
@@ -27,6 +28,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/cookie-policy" element={<CookiePolicy />} />
+        <Route path="/proposal" element={<Proposal />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
