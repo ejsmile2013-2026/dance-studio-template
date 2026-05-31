@@ -1,0 +1,6 @@
+{
+  "name": "Dance Class Trial Registration",
+  "description": "Интерактивная запись ребенка на пробный урок танцев с подбором группы через квиз.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

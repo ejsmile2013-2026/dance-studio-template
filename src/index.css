@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Nunito", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --color-brand-blue: #2563eb;
+  --color-brand-blue-hover: #1d4ed8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #f8f7f5;
+  color: #0f172a;
+}
+
+@keyframes shimmer-sweep {
+  0%   { transform: translateX(-130%) skewX(-15deg); }
+  50%  { transform: translateX(360%) skewX(-15deg); }
+  100% { transform: translateX(360%) skewX(-15deg); }
+}
+
+.shimmer-beam {
+  position: absolute;
+  top: -20%;
+  left: 0;
+  width: 38%;
+  height: 140%;
+  background: linear-gradient(to right, transparent 0%, rgba(244,114,182,0.22) 50%, transparent 100%);
+  animation: shimmer-sweep 9s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.shimmer-beam-btn {
+  position: absolute;
+  top: -20%;
+  left: 0;
+  width: 55%;
+  height: 140%;
+  background: linear-gradient(to right, transparent 0%, rgba(244,114,182,0.30) 50%, transparent 100%);
+  animation: shimmer-sweep 7s ease-in-out infinite;
+  pointer-events: none;
+}
