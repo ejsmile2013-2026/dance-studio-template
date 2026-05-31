@@ -101,41 +101,43 @@ export default function Proposal() {
       </section>
 
       {/* ─── Pain Points ─── */}
-      <section className="max-w-5xl mx-auto px-6 py-8 md:py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
-          transition={{ duration: 0.5 }}
-          className="grid md:grid-cols-2 gap-8 items-start"
-        >
-          <div>
-            <span className="text-xs font-mono font-bold text-[#2196D9] uppercase tracking-widest">The Problem</span>
-            <h2 className="font-display font-black text-3xl md:text-4xl text-slate-900 mt-2 mb-4 tracking-tight">
-              Great teaching.<br />
-              <span className="text-slate-400">Invisible online.</span>
-            </h2>
-            <p className="text-slate-500 leading-relaxed text-sm">
-              Most dance studios rely on word-of-mouth and social media — and leave dozens of potential students on the table every month because there's no website to capture them.
-            </p>
-          </div>
+      <section className="bg-[#edeae7] py-8 md:py-20">
+        <div className="max-w-5xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.5 }}
+            className="grid md:grid-cols-2 gap-8 items-start"
+          >
+            <div>
+              <span className="text-xs font-mono font-bold text-[#2196D9] uppercase tracking-widest">The Problem</span>
+              <h2 className="font-display font-black text-3xl md:text-4xl text-slate-900 mt-2 mb-4 tracking-tight">
+                Great teaching.<br />
+                <span className="text-slate-400">Invisible online.</span>
+              </h2>
+              <p className="text-slate-500 leading-relaxed text-sm">
+                Most dance studios rely on word-of-mouth and social media — and leave dozens of potential students on the table every month because there's no website to capture them.
+              </p>
+            </div>
 
-          <div className="space-y-3">
-            {PROBLEMS.map((p, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, x: 16 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.08 }}
-                className="flex items-start gap-3 bg-white border border-slate-100 rounded-xl px-4 py-3.5 shadow-sm"
-              >
-                <span className="w-5 h-5 rounded-full bg-rose-100 text-rose-500 flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">✕</span>
-                <span className="text-sm text-slate-600 leading-snug">{p}</span>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+            <div className="space-y-3">
+              {PROBLEMS.map((p, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, x: 16 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: i * 0.08 }}
+                  className="flex items-start gap-3 bg-white border border-slate-100 rounded-xl px-4 py-3.5 shadow-sm"
+                >
+                  <span className="w-5 h-5 rounded-full bg-rose-100 text-rose-500 flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">✕</span>
+                  <span className="text-sm text-slate-600 leading-snug">{p}</span>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
       </section>
 
       {/* ─── What's Included ─── */}
@@ -175,54 +177,56 @@ export default function Proposal() {
       </section>
 
       {/* ─── Live Prototype ─── */}
-      <section id="prototype" className="max-w-5xl mx-auto px-6 py-8 md:py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
-          transition={{ duration: 0.5 }}
-          className="mb-8 text-center"
-        >
-          <span className="text-xs font-mono font-bold text-[#2196D9] uppercase tracking-widest">Live Demo</span>
-          <h2 className="font-display font-black text-3xl md:text-4xl text-slate-900 mt-2 tracking-tight">
-            This is what your site will look like
-          </h2>
-          <p className="text-slate-500 text-sm mt-2 max-w-md mx-auto">
-            Scroll, click, and explore — this is a fully working prototype, not a mockup.
-          </p>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 32, scale: 0.98 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          viewport={{ once: true, margin: "-40px" }}
-          transition={{ duration: 0.65 }}
-          className="rounded-2xl overflow-hidden shadow-[0_32px_80px_-8px_rgba(0,0,0,0.22)] border border-slate-200"
-          style={{ height: "70vh", minHeight: "500px" }}
-        >
-          <iframe
-            src="https://dance-studio-template.vercel.app"
-            title="Dance Studio Website Prototype"
-            className="w-full h-full border-0"
-            loading="lazy"
-            allow="fullscreen"
-          />
-        </motion.div>
-
-        <div className="flex justify-center mt-6">
-          <a
-            href="https://dance-studio-template.vercel.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2.5 px-6 py-3 bg-[#2196D9] hover:bg-[#1a7bbf] text-white font-bold text-sm uppercase tracking-wider rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 transform transition-all duration-200"
+      <section id="prototype" className="bg-[#edeae7] py-8 md:py-20">
+        <div className="max-w-5xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.5 }}
+            className="mb-8 text-center"
           >
-            <ExternalLink className="w-4 h-4" />
-            Open Full Screen
-          </a>
+            <span className="text-xs font-mono font-bold text-[#2196D9] uppercase tracking-widest">Live Demo</span>
+            <h2 className="font-display font-black text-3xl md:text-4xl text-slate-900 mt-2 tracking-tight">
+              This is what your site will look like
+            </h2>
+            <p className="text-slate-500 text-sm mt-2 max-w-md mx-auto">
+              Scroll, click, and explore — this is a fully working prototype, not a mockup.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 32, scale: 0.98 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.65 }}
+            className="rounded-2xl overflow-hidden shadow-[0_32px_80px_-8px_rgba(0,0,0,0.22)] border border-slate-200"
+            style={{ height: "70vh", minHeight: "500px" }}
+          >
+            <iframe
+              src="https://dance-studio-template.vercel.app"
+              title="Dance Studio Website Prototype"
+              className="w-full h-full border-0"
+              loading="lazy"
+              allow="fullscreen"
+            />
+          </motion.div>
+
+          <div className="flex justify-center mt-6">
+            <a
+              href="https://dance-studio-template.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2.5 px-6 py-3 bg-[#2196D9] hover:bg-[#1a7bbf] text-white font-bold text-sm uppercase tracking-wider rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 transform transition-all duration-200"
+            >
+              <ExternalLink className="w-4 h-4" />
+              Open Full Screen
+            </a>
+          </div>
+          <p className="text-center text-xs text-slate-400 mt-4 font-mono">
+            ↑ This is a real, working site — not a screenshot. Scroll and interact.
+          </p>
         </div>
-        <p className="text-center text-xs text-slate-400 mt-4 font-mono">
-          ↑ This is a real, working site — not a screenshot. Scroll and interact.
-        </p>
       </section>
 
       {/* ─── How it Works ─── */}
@@ -263,69 +267,71 @@ export default function Proposal() {
       </section>
 
       {/* ─── Pricing ─── */}
-      <section className="max-w-5xl mx-auto px-6 py-8 md:py-20">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.5 }}
-          >
-            <span className="text-xs font-mono font-bold text-[#2196D9] uppercase tracking-widest">Investment</span>
-            <h2 className="font-display font-black text-3xl md:text-4xl text-slate-900 mt-2 mb-4 tracking-tight">
-              One student pays for the whole site
-            </h2>
-            <p className="text-slate-500 text-sm leading-relaxed">
-              At $89–149/month per student, a single new enrollment covers your site in 3–4 months.
-              Most studios see 5–10 new leads in the first month alone.
-            </p>
-
-            <div className="mt-6 space-y-2.5">
-              {[
-                "Custom design matching your brand",
-                "All pages: Home, Classes, Schedule, Gallery, FAQ, About",
-                "Hosted & deployed — no technical knowledge needed",
-                "1 free revision round",
-                "30-day support after launch",
-              ].map((item, i) => (
-                <div key={i} className="flex items-start gap-2.5 text-sm text-slate-600">
-                  <CheckCircle2 className="w-4 h-4 text-[#2196D9] shrink-0 mt-0.5" />
-                  {item}
-                </div>
-              ))}
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.96 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="bg-gradient-to-br from-[#0d2240] to-[#1264A5] rounded-2xl p-8 text-white shadow-[0_24px_60px_rgba(18,100,165,0.35)]"
-          >
-            <p className="text-white/50 text-xs font-mono uppercase tracking-widest mb-2">Starting from</p>
-            <p className="font-display font-black text-6xl tracking-tight mb-1">$500</p>
-            <p className="text-white/60 text-sm mb-8">one-time, flat fee · no surprises</p>
-
-            <div className="space-y-3 mb-8">
-              {["7-day delivery", "Mobile-optimized", "Hosted on Vercel (free tier)", "Domain setup included"].map((f, i) => (
-                <div key={i} className="flex items-center gap-2.5 text-sm text-white/80">
-                  <div className="w-1.5 h-1.5 rounded-full bg-[#4CB8F2] shrink-0" />
-                  {f}
-                </div>
-              ))}
-            </div>
-
-            <a
-              href={WA_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2.5 w-full py-3.5 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-bold text-sm uppercase tracking-wider rounded-xl transition-all duration-200 hover:shadow-lg"
+      <section className="bg-[#edeae7] py-8 md:py-20">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.5 }}
             >
-              <MessageCircle className="w-4 h-4" />
-              I'm interested — let's talk
-            </a>
-          </motion.div>
+              <span className="text-xs font-mono font-bold text-[#2196D9] uppercase tracking-widest">Investment</span>
+              <h2 className="font-display font-black text-3xl md:text-4xl text-slate-900 mt-2 mb-4 tracking-tight">
+                One student pays for the whole site
+              </h2>
+              <p className="text-slate-500 text-sm leading-relaxed">
+                At $89–149/month per student, a single new enrollment covers your site in 3–4 months.
+                Most studios see 5–10 new leads in the first month alone.
+              </p>
+
+              <div className="mt-6 space-y-2.5">
+                {[
+                  "Custom design matching your brand",
+                  "All pages: Home, Classes, Schedule, Gallery, FAQ, About",
+                  "Hosted & deployed — no technical knowledge needed",
+                  "1 free revision round",
+                  "30-day support after launch",
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-2.5 text-sm text-slate-600">
+                    <CheckCircle2 className="w-4 h-4 text-[#2196D9] shrink-0 mt-0.5" />
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.96 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="bg-gradient-to-br from-[#0d2240] to-[#1264A5] rounded-2xl p-8 text-white shadow-[0_24px_60px_rgba(18,100,165,0.35)]"
+            >
+              <p className="text-white/50 text-xs font-mono uppercase tracking-widest mb-2">Starting from</p>
+              <p className="font-display font-black text-6xl tracking-tight mb-1">$500</p>
+              <p className="text-white/60 text-sm mb-8">one-time, flat fee · no surprises</p>
+
+              <div className="space-y-3 mb-8">
+                {["7-day delivery", "Mobile-optimized", "Hosted on Vercel (free tier)", "Domain setup included"].map((f, i) => (
+                  <div key={i} className="flex items-center gap-2.5 text-sm text-white/80">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#4CB8F2] shrink-0" />
+                    {f}
+                  </div>
+                ))}
+              </div>
+
+              <a
+                href={WA_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2.5 w-full py-3.5 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-bold text-sm uppercase tracking-wider rounded-xl transition-all duration-200 hover:shadow-lg"
+              >
+                <MessageCircle className="w-4 h-4" />
+                I'm interested — let's talk
+              </a>
+            </motion.div>
+          </div>
         </div>
       </section>
 
