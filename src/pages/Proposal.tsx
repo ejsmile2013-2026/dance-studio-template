@@ -101,7 +101,7 @@ export default function Proposal() {
       </section>
 
       {/* ─── Pain Points ─── */}
-      <section className="max-w-5xl mx-auto px-6 py-16 md:py-20">
+      <section className="max-w-5xl mx-auto px-6 py-8 md:py-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -139,7 +139,7 @@ export default function Proposal() {
       </section>
 
       {/* ─── What's Included ─── */}
-      <section className="bg-white border-y border-slate-100 py-16 md:py-20">
+      <section className="bg-white border-y border-slate-100 py-8 md:py-20">
         <div className="max-w-5xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -175,7 +175,7 @@ export default function Proposal() {
       </section>
 
       {/* ─── Live Prototype ─── */}
-      <section id="prototype" className="max-w-5xl mx-auto px-6 py-16 md:py-20">
+      <section id="prototype" className="max-w-5xl mx-auto px-6 py-8 md:py-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -240,7 +240,7 @@ export default function Proposal() {
       </section>
 
       {/* ─── How it Works ─── */}
-      <section className="bg-white border-y border-slate-100 py-16 md:py-20">
+      <section className="bg-white border-y border-slate-100 py-8 md:py-20">
         <div className="max-w-5xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -277,7 +277,7 @@ export default function Proposal() {
       </section>
 
       {/* ─── Pricing ─── */}
-      <section className="max-w-5xl mx-auto px-6 py-16 md:py-20">
+      <section className="max-w-5xl mx-auto px-6 py-8 md:py-20">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -344,7 +344,7 @@ export default function Proposal() {
       </section>
 
       {/* ─── Final CTA ─── */}
-      <section className="bg-gradient-to-br from-[#0a1628] via-[#0d2240] to-[#1264A5] py-20 md:py-28 text-white text-center relative overflow-hidden">
+      <section className="bg-gradient-to-br from-[#0a1628] via-[#0d2240] to-[#1264A5] py-12 md:py-28 text-white text-center relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[40rem] h-40 bg-[#2196D9]/20 rounded-full blur-3xl" />
         </div>
