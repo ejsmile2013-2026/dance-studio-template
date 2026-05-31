@@ -265,7 +265,7 @@ export default function Proposal() {
                 transition={{ duration: 0.4, delay: i * 0.1 }}
                 className="relative"
               >
-                <span className="font-display font-black text-5xl text-[#2196D9] leading-none block mb-3">
+                <span className="font-display font-black text-5xl text-[#2196D9]/30 leading-none block mb-3">
                   {step.n}
                 </span>
                 <h3 className="font-display font-black text-base text-slate-900 tracking-tight mb-1">{step.title}</h3>
