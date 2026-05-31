@@ -922,12 +922,12 @@ export default function App() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              { file: "studio_lobby.png",      label: "Lobby & Studio Space"    },
-              { file: "class_toddlers.png",    label: "Baby Dance — Ages 3–5"   },
-              { file: "class_ballet.png",      label: "Classical Ballet"         },
-              { file: "class_hiphop.png",      label: "Hip-Hop Class"            },
-              { file: "recital.png",           label: "Spring Recital"           },
-              { file: "instructor_moment.png", label: "Instructor & Student"     },
+              { file: "studio_lobby.jpg",      label: "Lobby & Studio Space"    },
+              { file: "class_toddlers.jpg",    label: "Baby Dance — Ages 3–5"   },
+              { file: "class_ballet.jpg",      label: "Classical Ballet"         },
+              { file: "class_hiphop.jpg",      label: "Hip-Hop Class"            },
+              { file: "recital.jpg",           label: "Spring Recital"           },
+              { file: "instructor_moment.jpg", label: "Instructor & Student"     },
             ].map((item, idx) => (
               <motion.div
                 key={idx}
