@@ -492,7 +492,7 @@ export default function App() {
         </div>
 
         {/* Quiz Zone */}
-        <section id="quiz-section-anchor" className="-mt-16 scroll-mt-24">
+        <section id="quiz-section-anchor" className="mt-4 md:-mt-16 scroll-mt-24">
           <AnimatePresence mode="wait">
             {!quizStarted && !latestSubmission ? (
               <motion.div
