@@ -353,7 +353,7 @@ export default function App() {
       </header>
 
       {/* ─── Main Content ─── */}
-      <main className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16 space-y-32">
+      <main className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16 space-y-12 md:space-y-32">
 
         {/* ── Hero + Trust Counters — shared full-bleed background ── */}
         <div className="relative rounded-3xl overflow-hidden">
