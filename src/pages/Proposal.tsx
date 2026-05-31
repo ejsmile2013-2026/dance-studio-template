@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
 import {
   CheckCircle2,
   MessageCircle,
@@ -46,14 +46,31 @@ const STEPS = [
 ];
 
 export default function Proposal() {
+  const { scrollY } = useScroll();
+  const blob1Y = useTransform(scrollY, [0, 700], [0, -80]);
+  const blob2Y = useTransform(scrollY, [0, 700], [0, -40]);
+
   return (
-    <div className="min-h-screen bg-[#f8f7f5] font-sans text-slate-900 antialiased">
+    <div className="min-h-screen bg-[#f8f7f5] font-sans text-slate-900 antialiased scroll-smooth">
 
       {/* ─── Hero ─── */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#0a1628] via-[#0d2240] to-[#1264A5] text-white">
-        {/* Decorative blobs */}
-        <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#2196D9]/20 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-72 h-72 bg-[#4CB8F2]/10 rounded-full blur-3xl pointer-events-none" />
+        {/* Animated gradient overlay */}
+        <motion.div
+          className="absolute inset-0 pointer-events-none"
+          animate={{
+            background: [
+              "radial-gradient(ellipse at 15% 40%, rgba(76,184,242,0.18) 0%, transparent 60%), radial-gradient(ellipse at 85% 65%, rgba(18,100,165,0.22) 0%, transparent 60%)",
+              "radial-gradient(ellipse at 85% 30%, rgba(76,184,242,0.18) 0%, transparent 60%), radial-gradient(ellipse at 15% 75%, rgba(18,100,165,0.22) 0%, transparent 60%)",
+              "radial-gradient(ellipse at 50% 85%, rgba(76,184,242,0.18) 0%, transparent 60%), radial-gradient(ellipse at 50% 10%, rgba(18,100,165,0.22) 0%, transparent 60%)",
+              "radial-gradient(ellipse at 15% 40%, rgba(76,184,242,0.18) 0%, transparent 60%), radial-gradient(ellipse at 85% 65%, rgba(18,100,165,0.22) 0%, transparent 60%)",
+            ],
+          }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+        />
+        {/* Parallax blobs */}
+        <motion.div style={{ y: blob1Y }} className="absolute -top-24 -right-24 w-96 h-96 bg-[#2196D9]/20 rounded-full blur-3xl pointer-events-none" />
+        <motion.div style={{ y: blob2Y }} className="absolute bottom-0 left-0 w-72 h-72 bg-[#4CB8F2]/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative max-w-5xl mx-auto px-6 py-20 md:py-28">
           <motion.div
@@ -127,9 +144,10 @@ export default function Proposal() {
                   key={i}
                   initial={{ opacity: 0, x: 16 }}
                   whileInView={{ opacity: 1, x: 0 }}
+                  whileHover={{ y: -5, boxShadow: "0 12px 28px -6px rgba(0,0,0,0.13)" }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.08 }}
-                  className="flex items-start gap-3 bg-white border border-slate-100 rounded-xl px-4 py-3.5 shadow-sm"
+                  className="flex items-start gap-3 bg-white border border-slate-100 rounded-xl px-4 py-3.5 shadow-md cursor-default"
                 >
                   <span className="w-5 h-5 rounded-full bg-rose-100 text-rose-500 flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">✕</span>
                   <span className="text-sm text-slate-600 leading-snug">{p}</span>
@@ -162,9 +180,10 @@ export default function Proposal() {
                 key={i}
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ y: -6, boxShadow: "0 14px 32px -6px rgba(33,150,217,0.13)" }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.06 }}
-                className="flex items-start gap-3 p-4 bg-[#f8f7f5] rounded-xl border border-slate-100"
+                className="flex items-start gap-3 p-4 bg-[#f8f7f5] rounded-xl border border-slate-100 shadow-sm cursor-default"
               >
                 <div className="w-8 h-8 bg-[#2196D9]/10 rounded-lg flex items-center justify-center shrink-0">
                   <Icon className="w-4 h-4 text-[#2196D9]" />
@@ -251,9 +270,10 @@ export default function Proposal() {
                 key={i}
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ y: -4 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.1 }}
-                className="relative"
+                className="relative cursor-default"
               >
                 <span className="font-display font-black text-5xl text-[#2196D9]/30 leading-none block mb-3">
                   {step.n}
@@ -304,9 +324,10 @@ export default function Proposal() {
             <motion.div
               initial={{ opacity: 0, scale: 0.96 }}
               whileInView={{ opacity: 1, scale: 1 }}
+              whileHover={{ y: -6, boxShadow: "0 36px 80px -10px rgba(18,100,165,0.55)" }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-gradient-to-br from-[#0d2240] to-[#1264A5] rounded-2xl p-8 text-white shadow-[0_24px_60px_rgba(18,100,165,0.35)]"
+              className="bg-gradient-to-br from-[#0d2240] to-[#1264A5] rounded-2xl p-8 text-white shadow-[0_28px_70px_rgba(18,100,165,0.45)]"
             >
               <p className="text-white/50 text-xs font-mono uppercase tracking-widest mb-2">Starting from</p>
               <p className="font-display font-black text-6xl tracking-tight mb-1">$500</p>
