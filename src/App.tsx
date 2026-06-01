@@ -1469,6 +1469,8 @@ export default function App() {
           <div className="border-t border-slate-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-xs text-slate-600 font-sans">
               © {new Date().getFullYear()} {STUDIO_CONFIG.name}. All rights reserved.
+              {' · '}Built by{' '}
+              <a href="https://ai-touch-site.vercel.app" target="_blank" rel="noopener" className="hover:text-slate-400 transition-colors">Njasik Touch</a>
             </p>
             <nav className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2" aria-label="Legal">
               {[
